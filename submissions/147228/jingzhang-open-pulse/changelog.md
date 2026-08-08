@@ -22,3 +22,23 @@ reviewable deliverables and bilingual review surface.
 - Rebuilt all five required evidence boards from the submitted GeoJSON and metrics; removed stale v1.1–v1.3 footers and unsupported percentage claims.
 - Added the explicit `building_footprint_ratio` metric and clarified that 2.72% is a provisional geometry ratio, not a statutory control.
 - Re-rendered the Chinese and English offline reports with semantic tables retained for reviewer readability; no remote runtime dependency was added.
+
+## v1.8.1 - 2026-08-08
+
+- Classified “藏风聚气 / 风水” strictly as cultural landscape narrative, not a health, air-quality, hydrological or engineering causal claim.
+- Translated that narrative into six auditable but currently `unknown` baselines for pedestrian wind comfort, pollutant stagnation, mean radiant temperature, continuous shade, blue-green accessible-route overlap and water-risk exceedance routing.
+- Added three peer-reviewed method references with DOI and explicit non-transfer limits; no published case result is represented as Jing-Zhang CFD, measurement or health evidence.
+
+## v1.9 / v2.0 evidence consolidation - 2026-08-08
+
+- Added six officially sourced public AI ecosystem cases and a policy–enterprise crosswalk that binds each mechanism to a local scenario, acceptance evidence and a do-not-copy boundary.
+- Added `visual/assets/wind-health-validation-plan.json`, a six-gate evidence contract that keeps wind comfort, pollutant stagnation, heat, shade, blue-green access and water risk `unknown` until geometry, field, calibration and professional-review evidence is complete.
+- Registered three official data-route records for the Haidian climate-normals catalogue, the district meteorological network and Qinghe Station wind monitoring; they are acquisition/context routes only and do not replace local measurements.
+- Added a bilingual, scalable Open Pulse identity-mark concept with explicit trademark, font and accessibility clearance boundaries.
+- Added English counterparts for all review figures and A3/A0 boards, while keeping the Chinese and English surfaces equivalent and offline.
+
+## v2.1 - 2026-08-08
+
+- Added `visual/assets/wind-health-field-protocol.json` as a pre-registered field observation, calibration, model-alignment and stop-condition contract for the six health/wind/water metrics.
+- Added AIJ pedestrian-wind CFD and ISO 7726 catalogue method references with explicit boundaries; no local measurement, CFD result, comfort threshold or health outcome was fabricated or transferred.
+- Kept all six local metrics `unknown` until versioned geometry, field data, calibration/QC, model comparison, uncertainty and professional sign-off are available.

@@ -170,6 +170,24 @@ S4 的平均后悔值仅 0.314 分，八类压力中最低设计分 67.194；它
 5. **生态与夜间：**使用乡土、多层次、耐旱的生境结构，设置不连续但可连接的生态“踏脚石”；玻璃界面进行鸟撞审查，生态敏感段采用暗天空、低眩光、分时照明。没有本底调查前，不宣称物种增加或生态净增益。[source:BEIJING-BIRD-BIODIVERSITY-2024] [source:BEIJING-LIGHTING-GUIDE-2025] [assumption:A-BIODIVERSITY-LIGHT-001]
 6. **维护即设计：**每个树池、雨水口、透水铺装、座椅、照明、导视、传感器和机器人停靠点必须在建设前拥有资产 ID、责任主体、巡检触发、备件、维修窗口、人工降级和退出路径。连续两次工单逾期或无法获得备件，优先删除复杂设备，改用被动、标准化、可替换构件。[source:ASSET-MANAGEMENT-GBT33172] [source:RESILIENT-CITY-INFRASTRUCTURE-2024] [assumption:A-LIFECYCLE-MAINTENANCE-001]
 
+### 2.1 “藏风聚气 / 风水”的文化边界与工程转译
+
+本方案允许“藏风聚气”“风水”作为京张沿线传统空间感知、地名记忆和景观叙事的文化词汇，但不把它们当作医学结论、公共健康因果、空气质量证明、水文规律、工程模型或审批依据。任何对健康气流的判断，都必须拆成可复核的风、热、污染、遮阴、蓝绿空间和水风险问题；在资料未到位前维持 `unknown`，不得用文化语言填补证据空白。[assumption:A-AIR-WIND-001] [assumption:A-DRAINAGE-SYSTEM-001]
+
+- **行人层风舒适：**设计目标是避免连续风墙、危险强风和大面积静风区；当前可接受面积比例为 `unknown`。正式验证需使用经专业确认的舒适准则，对冬夏典型风向、静风、有叶/无叶及不同人群活动时段开展行人层 CFD，并以现场风速风向校准。[metric:pedestrian_wind_comfort_acceptable_area_ratio] [source:LIU-URBAN-VENTILATION-2017]
+- **污染滞留与稀释：**设计目标是识别交通、施工、活动和街谷界面的滞留热点，而不是笼统宣称“风带来健康”。当前热点数量为 `unknown`；后续需明确排放源、背景浓度、风边界条件，以空气龄或经专业确认的通风效率指标结合 PM2.5 监测复核。三个论文案例只提供方法与权衡提示，不能移植其百分比或结论。[metric:pollutant_stagnation_hotspot_count] [source:LIU-URBAN-VENTILATION-2017] [source:MENG-WIND-HEAT-PM25-2022] [source:NOSEK-STREET-CANYON-2025]
+- **热暴露与遮阴：**设计目标是让连续无障碍主链在高温时段拥有可用遮阴、饮水、停歇与避暑节点；当前平均辐射温度基线和连续遮阴比例均为 `unknown`。后续以分季节、分时段的太阳辐射/树冠模型、MRT 实测和弱势人群陪行共同验证，不以树木数量代替热舒适。[metric:mean_radiant_temperature_baseline_c] [metric:continuous_shaded_accessible_route_ratio]
+- **蓝绿空间与健康：**绿地和公共空间图层只表达概念性设计供给；与无障碍主链的有效重合比例仍为 `unknown`。后续需现场确认入口、坡度、连续性、安全、水质和维护，再评估可达性与实际使用；本方案不从“临水/近绿”直接推出身体或心理健康改善。[metric:green_ratio] [metric:blue_green_accessible_route_overlap_ratio] [source:WHO-URBAN-HEALTH-AND-GREEN]
+- **水风险：**雨水花园、调蓄和超标行泄是 `design_target`，但关键无障碍路线避开危险水深/流速的核验比例为 `unknown`。正式深化需用 DEM、管网、出水口、土壤、地下水、水质、设计暴雨及二维地表模型验证；在此之前不作“无内涝”“聚水生财”或健康收益承诺。[metric:water_risk_exceedance_route_verified_ratio] [assumption:A-DRAINAGE-SYSTEM-001]
+
+这里的状态规则是：`visual/assets/evidence-ledger.json` 中的 `design_target` 只说明未来要达到的审查门；`metrics.json` 中上述六项 `unknown` 才是当前证据状态。只有模拟输入、校准记录、现场观测、公式、误差和专业责任人齐全后，才能更新为 `known`，且仍需分开报告舒适、污染、热和水风险，不能合并成一个“风水健康分”。
+
+为避免把“以后再测”写成空泛承诺，本轮增加 `visual/assets/wind-health-validation-plan.json` 作为证据合同：它把六项指标分别绑定到几何版本、风热边界、排放源、现场采样、校准误差、责任人和停止条件，并规定缺任何一项时继续保持 `unknown`。该文件是验证协议，不是海淀现场数据、CFD 结果、健康结论或工程/审批文件；三篇风环境论文只用于方法边界，不迁移个案数值。
+
+本轮进一步增加 `visual/assets/wind-health-field-protocol.json`，把“现场再测”变成可预注册的工作包：每个点固定 `point_id`、`geometry_version`、时间、仪器、测高、风速/风向、PM2.5、热环境、树冠状态和质控标记；风、污染和热测量分别规定校准/共址、背景与排放时序、模型—现场同点对齐及误差报告。点数、重复次数和最终舒适阈值必须在看数据前由专业团队登记并签字，不能用方便步行代替代表性样本。几何版本缺失、校准缺失、现场不安全、排放源或检出限缺失，或把“藏风聚气/风水”重新写成因果证据时，协议要求停止解释并维持 `unknown`。[source:AIJ-CFD-PEDESTRIAN-WIND-2008] [source:AIJ-CFD-GUIDEBOOK] [source:ISO-7726-INSTRUMENTS-2025]
+
+数据入口也单独登记为“已识别、未下载”：北京市公共数据平台已登记海淀地面气候标准值数据集，海淀政府公开材料描述了 `1+21+65+100` 气象监测网络，清河站区公开材料说明站区微型站监测风向风力。它们只能作为合法取数、责任协调和附近监测背景的入口，不能替代京张三处重点区的现场观测或 CFD 校准；在取得并审查版本化数据前，六项本地指标继续保持 `unknown`。[source:HAIDIAN-CLIMATE-NORMS-DATASET-2025] [source:HAIDIAN-METEOROLOGICAL-NETWORK-2023] [source:QINGHE-STATION-WIND-MONITORING-2021]
+
 ### 3. 三处重点区的差异化压力测试
 
 - **众智园：**把清河界面作为风、水、低碳构件和具身智能封闭测试的共同实验场；先验证排水、冬季防滑、机器人失效和数据安全，再开放展示。
@@ -314,7 +332,20 @@ v1.5 在上一轮“低后悔”压力测试上扩展为 97 条原子证据记�
 
 机器可读的边界、输入、输出、责任和回流路径见 `visual/assets/regional-ecosystem.json`；图中“originate—engineer—book—test—publish evidence—scale or retire”是运营建议，不是已签署的组织架构。
 
-为避免把“国际案例”写成未经清权的城市故事，新增 `visual/assets/case-mechanism-matrix.json` 采用“机制模式比较”而不是虚构案例背书。六种模式分别是站点公共客厅、有界城市实验室、蓝绿服务街、开发者公共库、夜间安静网络和文化作为方法；每行都写明可借鉴机制、不可照搬事项、京张测试接口和正式引用前必须补齐的证据。后续专业团队可在完成来源核验后替换为有链接、有许可、有绩效边界的真实案例。
+为补齐 agent.2 要求的 5—8 个 AI 生态案例，新增 `visual/assets/case-mechanism-matrix.json`，把六个官方公开案例与六种可迁移机制分开记录。案例只回答“它公开展示了什么机制”，不把外部城市的成绩、法律制度或合作关系移植到海淀：
+
+| 案例 | 已核验机制 | 京张转译接口 | 不照搬边界 |
+| --- | --- | --- | --- |
+| Helsinki AI Register | 城市 AI 系统登记、详情页与反馈入口 | 为每个公共空间试点设置目的、数据边界、责任人、状态板和投诉路由 | 登记表不能替代无障碍、安全、采购和居民同意审查 [source:CASE-HELSINKI-AI-REGISTER] |
+| Amsterdam Algorithm Register | 公开说明城市算法用于什么服务，并形成 Civic AI Lab 语境 | 测试前发布 plain-language record，连接审查、停止和补救路径 | 不把外部登记机制当作中国法律合规，也不越过保密审查 [source:CASE-AMSTERDAM-ALGORITHM-REGISTER] |
+| Singapore AI Verify | 标准化 AI 测试、开源协作与 assurance sandbox | 众智园设置预约、人工主导的 assurance window，附 model card、测试记录和回滚 | 工具包不是认证、采购批准或无同意测试许可 [source:CASE-SINGAPORE-AI-VERIFY] |
+| Decidim Barcelona | 可追溯的线上参与与线下参与、开放协作软件 | 贡献墙与在线台账同时提供纸面、窗口和多语种参与，公开“哪些意见改变了什么” | 数字参与不能替代无设备、无账号或需要线下支持的人 [source:CASE-DECIDIM-BARCELONA] |
+| UK ATRS | 以标准化公开记录说明算法为何使用、如何使用 | 形成 purpose、owner、data、human review、alternatives、limits、incident、update 的 preflight 记录 | 这是英国公共部门标准，不是北京地方强制要求 [source:CASE-UK-ATRS] |
+| Seoul AI Foundation | 以城市级机构串联研究、公共服务、人才和全球协作 | 以责任明确的小型接口连接高校策源、公共验证、人才服务和国际交流 | 不暗示首尔合作、资金、机构授权或京张实施承诺 [source:CASE-SEOUL-AI-FOUNDATION] |
+
+这六个案例都标为 `official_public_case` 或 `official_public_secondary_case`，来源、访问日期和用途边界在 `sources.json` 登记；它们是机制比较，不是本地现状证据、工程可行性证明或竞赛排名。六种模式（站点公共客厅、有界城市实验室、蓝绿服务街、开发者公共库、夜间安静网络和文化作为方法）仍保留在同一 JSON 的 `rows` 中，供专业团队把案例机制映射到三处重点区的节点计划。
+
+政策工具与企业发展接口进一步写入 `visual/assets/case-policy-enterprise-crosswalk.json`：每个案例都绑定一个政策工具、一个企业发展问题、一个本地场景、可回读的验收证据和不照搬边界。它把“看过案例”推进到“企业如何进入测试、采购、服务和复盘链条”，但不把设计建议写成招商、资金或政府承诺。
 
 ### 2. 十四条场景—空间—运营矩阵
 
@@ -334,9 +365,12 @@ v1.5 在上一轮“低后悔”压力测试上扩展为 97 条原子证据记�
 
 身份系统把“百年铁路—开源协作—公共回馈”压缩成两条平行线、三个开放节点和两个切换菱形：众智园、AI 原点、大钟寺是公共节点，东西两翼可以接入不同的试点，但不改变普通公共使用。`visual/assets/identity-system.json` 和 `assets/figures/identity-system.png` 给出构造规则、色板、导视、盲文/高对比/语音替代和清权边界；当前只是概念方向，不是注册商标或 VI 定稿。
 
+本轮把身份方向落实为一个可评估的矢量标记 `assets/identity/open-pulse-mark.svg`：两条并行线、三个开放节点、两个切换菱形与中英文命名均可缩放，旁边的 kilometre ticks、站点牌、盲文/高对比/语音替代遵循同一构造规则。它是许丙南 / Codex 的概念资产，不是注册商标、政府标识或已完成的 VI 定稿；正式使用前仍需商标、字体、无障碍和公共传播审查。
+
 `visual/assets/component-library.json` 给出八个实体组件：双线身份标、令牌入口板、缝合阈、雨水树池单元、安静链座椅、低照度呼吸灯、开放贡献墙和可撤回停靠位。每个组件都能离线服务人类、写明维护频率和故障触发，并要求机器人断网或传感器失效时不破坏排水、无障碍和安全。具身智能只能在有界窗口低速运行，急停、消防隔离和人工接管可见；组件不是产品认证、施工图或采购承诺。
 
 ![京张开源脉冲身份系统与公共组件构造规则图](assets/figures/identity-system.png)
+![京张开源脉冲矢量标记概念](assets/identity/open-pulse-mark.svg)
 
 ### 4. 版权、隐私与公共利益清权
 
@@ -435,13 +469,5 @@ v1.8 的验收不是“方案写得更长”，而是 13 个任务书评审维�
 ## 参考资料
 
 - brief/public-brief.md
-- brief/site-package/design_brief.json
-- brief/site-package/allowed_design_space.json
-- brief/site-package/enums/
-- brief/site-package/ranges/planning_limits.json
-- data/processed/agent_fact_pack.md
-- data/processed/project_scope_summary.csv
-- data/processed/agent_task_requirements.csv
-- data/processed/source_use_matrix.csv
-- data/processed/missing_data_checklist.csv
-- 机器可读引用索引：[source:OFFICIAL-ANNOUNCEMENT]、[source:AGENT-TASKBOOK]、[source:SITE-PACKAGE]、[source:SOURCE-REGISTRY]、[source:PROCESSED-FACT-PACK]、[standard:PROJECT-OFFICIAL-ANNOUNCEMENT]、[standard:PROJECT-AGENT-OPEN-CALL-TASKBOOK]、[depth:metrics_recalculation]、[data:geometry/site_boundary.geojson#SITE-001]、[metric:site_area_sqm]
+
+完整的机器可读来源、标准、资料用途、处理资料和指标引用分别登记在 `sources.json`、`standard_matrix.json`、`design_depth_matrix.json`、`compliance_matrix.json`、`data/source_registry.json`、`data/processed/agent_fact_pack.md` 和 `metrics.json`。[source:OFFICIAL-ANNOUNCEMENT] 与 [source:SOURCE-REGISTRY] 是这条证据链的入口。其中，`sources.json` 新增的六个国际案例均保留官方公开 URL、访问日期、用途和“不构成合作或本地绩效证明”的边界；它们是提交包内的详细来源账本，不冒充仓库 `sources/public-sources.json` 的公共索引条目。

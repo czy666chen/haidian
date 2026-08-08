@@ -7,13 +7,13 @@ license: "COMMUNITY-DISPLAY-ONLY"
 summary: "A public-interest proving ground where urban AI must earn trust before it scales."
 tracks: ["ai-traffic-walkability", "enterprise-services-ecosystem", "civic-agent-governance"]
 scenarios: ["ai-traffic-walkability", "enterprise-service-copilot", "public-safety-operations-review"]
-version: "1.5"
-iteration: 6
+version: "1.7"
+iteration: 8
 ---
 
 # Jing-Zhang Civic AI Loop: An Open Belt for Verifiable Urban Agents
 
-> **v1.5 taskbook-visualisation status.** Package-level checks have passed, while all spatial figures still use repository provisional geometry with low aggregate confidence. They support conceptual review only—not official redlines, statutory controls, property, engineering, or precise-area claims. Official geometry must trigger coordinated recalculation.
+> **v1.7 visual-evidence review status.** Package-level checks have passed, while all spatial figures still use repository provisional geometry with low aggregate confidence. They support conceptual review only—not official redlines, statutory controls, property, engineering, or precise-area claims. Official geometry must trigger coordinated recalculation.
 
 **Motto: Every urban intelligence must withstand public scrutiny.**
 
@@ -93,6 +93,19 @@ Three layers overlap without surrendering the public realm: a free, accessible w
 
 A conceptual 15-minute public-value loop links a verified history point, non-digital service, prototype experience, feedback point and appeal/exit point. Actual accessibility cannot be claimed until official road, slope, crossing and facility data support route-by-route network analysis. Existing buildings pass a retain–adapt–demolish decision tree: verify title and structural safety; retain usable fabric; adapt valuable but underperforming fabric with reversible components; consider removal only through lawful process and demonstrated public benefit.
 
+### Spatial control book: from diagram to auditable section
+Before official survey, title and specialist inputs arrive, every control is labelled either **statutory value pending** (redlines, FAR, height, setbacks, parking and fire), **field measurement pending** (clear width, slope, canopy, noise, heat and footfall), or **concept performance** (continuous, reversible, accessible and recoverable). Every number carries source, date, measurer, scope and replacement trigger.
+
+|Place component|Conceptual section/action|Verify before works|Observable performance|
+|---|---|---|---|
+|Heritage slow spine|Movement, stay and ecological-buffer bands; detachable additions|Heritage impact, title, width/slope, fire and utilities|Closed gaps, accessible-task success, usable shade/rest|
+|Cross-stitch point|Improve existing crossing, light, guidance and waiting first|Flows, signals, sightline, drainage, accessibility and egress|Wait, near misses, slowest-user crossing time|
+|Open campus ground floor|Staffed service, shared rooms and transparent test window; separate back-of-house|Structure, fire, title, hours, noise and MEP capacity|Free hours, handoff success, non-consumption use|
+|Pocket proving point|Status board, human stop, seating, edge device and recoverable ground interface|Permit, power, weather, slip/child safety, maintenance and restoration|Stop drills, complaint closure, fallback continuity|
+|River/green edge|Keep devices off sensitive habitat; test only on hardscape in fixed windows|Blue line, flood, landscape, habitat, light and noise|Ecological disturbance, boundary breach, weather closure|
+
+Each key area develops a first 100 metres at 1:200, locating doors, ramps, trees, seats, tactile paths, devices, staffed desk, fire route and exit. Replication waits for a joint title–section–operation–emergency review with residents, accessibility representatives, operators and specialists; unverified lines remain dotted.
+
 ![Three key areas](assets/figures/key-areas.en.png)
 
 ## Three key areas
@@ -148,6 +161,9 @@ The storyline joins engineering courage, open experimentation and public respons
 
 International line: **A century-old railway becomes an open civic proving ground where urban AI must earn trust before it scales.** Exchange packages share protocols, failures, test templates and public-space components, never unapproved data or claims of a universal Beijing answer.
 
+### One real visit: brand touchpoints must complete a task
+The identity is tested through arrival–recognition–participation–help–exit, not logo preference. A resident can report a barrier by paper, phone or digital route and receive a traceable receipt; an international visitor can understand verified rail history, trial purpose and exit without roaming or an app; an SME can see equal eligibility, schedule, cost/support, refusal reason and licence; an older or disabled visitor can reach a visible human desk with screen-reader, hearing and tactile support. Copper mileage markers carry reviewed history, blue signs locate basic service, and green trial signs show version, boundary and stop status. No critical step relies only on QR, an app, Chinese or colour. Target users and unfamiliar operators run unprompted task walks before opening; communication may claim success only with dated scope, status, limits and recorded failure points.
+
 ## Phasing and governance
 - 0–6 months: obtain official inputs, run accessibility/site audits, create the problem and risk registers.
 - 6–18 months: operate three reversible prototypes, public evaluation protocol and contributor ledger.
@@ -173,6 +189,9 @@ The six taskbook items are converted from a compliance index into delivery contr
 
 Five ledgers make feasibility visible: space and hours; accountable people and rosters; data purpose/retention/deletion; equipment version/maintenance/energy/retirement; and public trust including complaints, near misses, group gaps and minority opinions. Before feasibility study, cost is shown only by seven classes—survey/design, reversible space works, equipment/safety, staffed operation, independent evaluation, maintenance, and exit/restoration—with quantity basis, quotation or norm source, uncertainty range and approval status. No total investment is invented.
 
+### Procurable interfaces: buy outcomes, not lock-in
+Phase one separates six independently acceptable and replaceable interfaces: signed base-map/specialist verification; accessible public-chain micro-works; staffed service/work orders; independent evaluation/red team; edge-device or robot sandbox; and wayfinding/public evidence. Each specification defines delivery unit, field task or independent acceptance evidence, open-format handover, log/data export, maintenance SLA, expiry review and restoration proof. Payment follows evidence complete–sample passed–field task passed–defects closed–handover complete, never mere equipment arrival or publicity. Models, robots and branding may not be bundled with basic public service; tenders state performance and evidence rather than a preferred supplier or unverified price. Personal or safety-sensitive material transfers only as the minimum lawful fields plus audit proof.
+
 ## Civic Agent Receipt and feasibility stress test
 
 Any run that may affect a route, service choice or field device creates a minimal receipt about the system, not a surveillance record about the person: receipt ID; scenario/model version; purpose; data classes and retention; evidence; confidence/refusal; output; accountable human; takeover; incident/appeal IDs; expiry; and disposition. Identity is absent by default and contact details, where necessary, are stored separately. Evidence conflict causes uncertainty and review; a request for a person freezes automation; a complaint locks the version; an overdue review changes status to paused.
@@ -180,6 +199,12 @@ Any run that may affect a route, service choice or field device creates a minima
 The architecture has four hard boundaries: edge-first processing, sandbox/production separation, least-privilege agents, and replaceable models/vendors with exportable receipts and tests. AP2 takes over during outage or vendor exit.
 
 The plan is also tested against adverse conditions. If official geometry conflicts, engineering quantities freeze and all geometry-linked outputs are recalculated while the governance protocol remains useful. If only one pilot can be funded, AP0–3 and P1 precede robotics. If trust declines, recruitment and promotion stop while independent review and non-digital service continue. In extreme weather or outage, devices close and staffed safety operations remain. If no operator, roster, SLA, maintenance and insurance are confirmed, the project cannot enter G2. A pilot that disproves its hypothesis and exits transparently is a valid result.
+
+## 19. The first 100 metres as a Civic AI Failure Theatre
+
+v1.7 condenses spatial evidence into a reviewable first 100 metres in each key area; this is not a new construction boundary or a dimensional promise. Five layers remain visible together: rail memory, shade and stormwater, continuous walking/cycling, reversible test pockets, and existing ground-floor edges. Every dimension remains field-survey pending. Four operating states make failure spatially legible: **A daily** keeps analogue routes and human service; **B contest** enables explanation, refusal and takeover; **C failure** stops devices, opens a physical bypass and onsite help; **D replay** publishes the run receipt, restoration proof and minority view. If AI procurement fails, accessibility, shade, seating, drainage, heritage interpretation and the human desk still retain public value. [depth:spatial_control_book] [metric:spatial_interface_type_count]
+
+The five figures and the first A3/A0 pages now share one visual grammar: an evidence ladder limits precision; five-layer sections control space; three task cards control everyday operations; three non-conflicting routes control safe degradation; and a public decision room chooses **scale, repair or exit**. These are visible indexes into the machine contracts, not renderings used as substitutes for professional evidence. [metric:receipt_required_field_count]
 
 ## Risk, rights and limitations
 The current empty constraints layer means title, heritage, utilities, fire, flood and road controls have not been obtained; it does **not** mean no constraints exist [data:geometry/constraints.geojson#CONSTRAINTS-PENDING]. Provisional site/key-area geometry cannot support FAR, height, demolition, precise area, ownership or engineering. Official polygons trigger coordinated replacement of layers, metrics, figures, PDFs, HTML, matrices and change record.
